@@ -421,6 +421,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 100px;
+    flex-wrap: wrap;
 }
 .services .container .box:nth-child(odd){
     flex-direction: row-reverse ;
@@ -532,6 +533,11 @@ ul {
     color: white;
     padding-bottom: 50px;
 }
+@media (max-width:991px) {
+    .prices{
+        flex-direction: column;
+    }
+}
 .prices .box{
     flex: 1;
     padding: 20px;
@@ -549,6 +555,11 @@ ul {
 }
 .prices .box ul{
     padding: 0 100px;
+}
+@media (max-width:767px) {
+    .prices .box ul{
+        padding: 0 20px;
+    }
 }
 .prices .box ul li {
     padding: 20px;
@@ -667,6 +678,14 @@ ul {
     top: 100px;
     left: 80px;
 }
+@media (max-width:767px) {
+    .plan .container .up img:last-of-type{
+        position: absolute;
+        width: 30%;
+        top: 245px;
+        left: -35px;
+    }
+}
 .plan .container .down{
     display: flex;
     justify-content: center;
@@ -709,8 +728,20 @@ ul {
     gap: 200px;
     align-items: center;
 }
+@media (max-width:767px) {
+    .footer .container{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 100px;
+    }
+}
 .footer .container .box1 img{
     margin-bottom: 20px;
+}
+@media (max-width:767px) {
+    .footer .container .box1 img{
+        max-width: 100%;
+    }
 }
 .footer .container .box1 p{
     max-width: 300px;
@@ -744,7 +775,30 @@ ul {
     color: var(--main-color);
 }
 /* end footer  */
-
+/* start tail  */
+.tail {
+    background-color: var(--main-color);
+}
+.tail .container {
+display: flex;
+justify-content: space-between;
+}
+.tail p {
+    padding: 5px 0;
+    font-size: 16px;
+    color: var(--second-color);
+}
+.tail a{
+    transition: var(--main-transision);
+    -webkit-transition: var(--main-transision);
+    -moz-transition: var(--main-transision);
+    -ms-transition: var(--main-transision);
+    -o-transition: var(--main-transision);
+}
+.tail a:hover{
+    color: rgb(85, 83, 83);
+}
+/* end tail  */
 
 
 
